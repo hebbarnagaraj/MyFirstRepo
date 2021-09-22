@@ -17,8 +17,8 @@ public class BaseClass {
 	public WebDriver driver;
 	
 	static {
-		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"SeleniumProject\\Drivers\\chromedriver.exe");
-		System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"SeleniumProject\\Drivers\\geckodriver.exe");
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\Drivers\\chromedriver.exe");
+		System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\Drivers\\geckodriver.exe");
 	}
 	@SuppressWarnings("deprecation")
 	@BeforeMethod
