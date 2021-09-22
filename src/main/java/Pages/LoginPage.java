@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import org.testng.Reporter;
 
 import SeleniumBaseClass.BaseClass;
 
@@ -30,11 +31,13 @@ public class LoginPage extends BaseClass{
 	public void setuserName(String UserName) {
 		explicitWaitforelementvisible(userName);
 		userName.sendKeys(UserName);
+		Reporter.log("-----------Entered Username--------",true);
 	}
 	
 	public void setPassword(String passWord) {
 		explicitWaitforelementvisible(Password);
 		Password.sendKeys(passWord);
+		Reporter.log("-----------Entered Password--------",true);
 	}
 	public void clickLogin() {
 		explicitWaitforelementvisible(loginBtn);
@@ -44,7 +47,7 @@ public class LoginPage extends BaseClass{
 		
 		explicitWaitforelementvisible(dashboard);
 		if(dashboard.isDisplayed()) {
-			System.out.println("Dashboard is visible");
+			Reporter.log("----------Dashboard is visible--------",true);
 		}
 		else {
 			Assert.fail();

@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Sep 22 19:30:11 IST 2021</td>
+<td>Started on:</td><td>Wed Sep 22 19:41:11 IST 2021</td>
 </tr>
-<tr><td>Total time:</td><td>68 seconds (68246 ms)</td>
+<tr><td>Total time:</td><td>81 seconds (81961 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,12 +76,12 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='SeleniumTestPackage.LoginClass.testlogin()'><b>testlogin</b><br>Test class: SeleniumTestPackage.LoginClass</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //a[@id=&apos;menu_dashboard_index&apos;]&apos; (tried for 30 second(s) with 500 milliseconds interval)
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //a[@id=&apos;menu_dashboard_index&apos;]&apos; (tried for 50 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
 	at SeleniumBaseClass.BaseClass.explicitWaitforelementvisible(BaseClass.java:46)
-	at Pages.LoginPage.verifyDashboard(LoginPage.java:42)
-	at SeleniumTestPackage.LoginClass.testlogin(LoginClass.java:21)
+	at Pages.LoginPage.verifyDashboard(LoginPage.java:45)
+	at SeleniumTestPackage.LoginClass.testlogin(LoginClass.java:22)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -113,8 +113,8 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;LAPTOP-JF65BFTU&apos;, ip: &apos;192.168.128.175&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_301&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 93.0.4577.63, chrome: {chromedriverVersion: 93.0.4577.63 (ff5c0da2ec0ad..., userDataDir: C:\Users\nagar\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53895}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 74fee8fae3eb580af87e5108afc7aca0
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 93.0.4577.63, chrome: {chromedriverVersion: 93.0.4577.63 (ff5c0da2ec0ad..., userDataDir: C:\Users\nagar\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53185}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 82e85f8ff64c80fba0a299f4be547556
 *** Element info: {Using=xpath, value=//a[@id=&apos;menu_dashboard_index&apos;]}
 	at sun.reflect.GeneratedConstructorAccessor13.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -138,13 +138,13 @@ Session ID: 74fee8fae3eb580af87e5108afc7aca0
 	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
 	... 28 more
-</pre></div><a href='#' onClick='toggleBox("stack-trace1547883191", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1547883191'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //a[@id=&apos;menu_dashboard_index&apos;]&apos; (tried for 30 second(s) with 500 milliseconds interval)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2080643905", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2080643905'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //a[@id=&apos;menu_dashboard_index&apos;]&apos; (tried for 50 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
 	at SeleniumBaseClass.BaseClass.explicitWaitforelementvisible(BaseClass.java:46)
-	at Pages.LoginPage.verifyDashboard(LoginPage.java:42)
-	at SeleniumTestPackage.LoginClass.testlogin(LoginClass.java:21)
+	at Pages.LoginPage.verifyDashboard(LoginPage.java:45)
+	at SeleniumTestPackage.LoginClass.testlogin(LoginClass.java:22)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -176,8 +176,8 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;LAPTOP-JF65BFTU&apos;, ip: &apos;192.168.128.175&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_301&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 93.0.4577.63, chrome: {chromedriverVersion: 93.0.4577.63 (ff5c0da2ec0ad..., userDataDir: C:\Users\nagar\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53895}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 74fee8fae3eb580af87e5108afc7aca0
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 93.0.4577.63, chrome: {chromedriverVersion: 93.0.4577.63 (ff5c0da2ec0ad..., userDataDir: C:\Users\nagar\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53185}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 82e85f8ff64c80fba0a299f4be547556
 *** Element info: {Using=xpath, value=//a[@id=&apos;menu_dashboard_index&apos;]}
 	at sun.reflect.GeneratedConstructorAccessor13.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -202,7 +202,7 @@ Session ID: 74fee8fae3eb580af87e5108afc7aca0
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
 	... 28 more
 </pre></div></td>
-<td>39</td>
+<td>64</td>
 <td>SeleniumTestPackage.LoginClass@2038ae61</td></tr>
 </table><p>
 </body>

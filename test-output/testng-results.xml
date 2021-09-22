@@ -2,27 +2,27 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="68246" started-at="2021-09-22T14:00:11Z" finished-at="2021-09-22T14:01:19Z">
+  <suite name="Default suite" duration-ms="81961" started-at="2021-09-22T14:11:11Z" finished-at="2021-09-22T14:12:33Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="68246" started-at="2021-09-22T14:00:11Z" finished-at="2021-09-22T14:01:19Z">
+    <test name="Default test" duration-ms="81961" started-at="2021-09-22T14:11:11Z" finished-at="2021-09-22T14:12:33Z">
       <class name="SeleniumTestPackage.LoginClass">
-        <test-method status="PASS" signature="setup()[pri:0, instance:SeleniumTestPackage.LoginClass@2038ae61]" name="setup" is-config="true" duration-ms="25276" started-at="2021-09-22T19:30:11Z" finished-at="2021-09-22T19:30:36Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:SeleniumTestPackage.LoginClass@2038ae61]" name="setup" is-config="true" duration-ms="15065" started-at="2021-09-22T19:41:11Z" finished-at="2021-09-22T19:41:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="testlogin()[pri:0, instance:SeleniumTestPackage.LoginClass@2038ae61]" name="testlogin" duration-ms="39160" started-at="2021-09-22T19:30:36Z" finished-at="2021-09-22T19:31:15Z">
+        <test-method status="FAIL" signature="testlogin()[pri:0, instance:SeleniumTestPackage.LoginClass@2038ae61]" name="testlogin" duration-ms="64061" started-at="2021-09-22T19:41:26Z" finished-at="2021-09-22T19:42:30Z">
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //a[@id='menu_dashboard_index']' (tried for 30 second(s) with 500 milliseconds interval)]]>
+              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //a[@id='menu_dashboard_index']' (tried for 50 second(s) with 500 milliseconds interval)]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //a[@id='menu_dashboard_index']' (tried for 30 second(s) with 500 milliseconds interval)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //a[@id='menu_dashboard_index']' (tried for 50 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
 	at SeleniumBaseClass.BaseClass.explicitWaitforelementvisible(BaseClass.java:46)
-	at Pages.LoginPage.verifyDashboard(LoginPage.java:42)
-	at SeleniumTestPackage.LoginClass.testlogin(LoginClass.java:21)
+	at Pages.LoginPage.verifyDashboard(LoginPage.java:45)
+	at SeleniumTestPackage.LoginClass.testlogin(LoginClass.java:22)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -54,8 +54,8 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'LAPTOP-JF65BFTU', ip: '192.168.128.175', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_301'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 93.0.4577.63, chrome: {chromedriverVersion: 93.0.4577.63 (ff5c0da2ec0ad..., userDataDir: C:\Users\nagar\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53895}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 74fee8fae3eb580af87e5108afc7aca0
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 93.0.4577.63, chrome: {chromedriverVersion: 93.0.4577.63 (ff5c0da2ec0ad..., userDataDir: C:\Users\nagar\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53185}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 82e85f8ff64c80fba0a299f4be547556
 *** Element info: {Using=xpath, value=//a[@id='menu_dashboard_index']}
 	at sun.reflect.GeneratedConstructorAccessor13.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -85,7 +85,7 @@ Session ID: 74fee8fae3eb580af87e5108afc7aca0
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testlogin -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:SeleniumTestPackage.LoginClass@2038ae61]" name="teardown" is-config="true" duration-ms="3797" started-at="2021-09-22T19:31:15Z" finished-at="2021-09-22T19:31:19Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:SeleniumTestPackage.LoginClass@2038ae61]" name="teardown" is-config="true" duration-ms="2667" started-at="2021-09-22T19:42:30Z" finished-at="2021-09-22T19:42:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
