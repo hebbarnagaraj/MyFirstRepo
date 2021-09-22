@@ -42,7 +42,7 @@ public class BaseClass {
 	}
 
 	public  void explicitWaitforelementvisible(WebElement element) {
-		WebDriverWait wait = new WebDriverWait(driver, 30);
+		WebDriverWait wait = new WebDriverWait(driver, 50);
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
 }

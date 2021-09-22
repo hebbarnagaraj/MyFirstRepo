@@ -28,13 +28,16 @@ public class LoginPage extends BaseClass{
 	}
 	
 	public void setuserName(String UserName) {
+		explicitWaitforelementvisible(userName);
 		userName.sendKeys(UserName);
 	}
 	
 	public void setPassword(String passWord) {
+		explicitWaitforelementvisible(Password);
 		Password.sendKeys(passWord);
 	}
 	public void clickLogin() {
+		explicitWaitforelementvisible(loginBtn);
 		loginBtn.click();
 	}
 	public void verifyDashboard() {
