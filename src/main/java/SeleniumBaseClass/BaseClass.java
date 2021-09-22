@@ -3,6 +3,7 @@ package SeleniumBaseClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -16,8 +17,8 @@ public class BaseClass {
 	public WebDriver driver;
 	
 	static {
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\nagar\\OneDrive\\Desktop\\Java\\Selenium\\Drivers\\chromedriver.exe");
-		System.setProperty("webdriver.gecko.driver", "C:\\Users\\nagar\\OneDrive\\Desktop\\Java\\Selenium\\Drivers\\geckodriver.exe");
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"SeleniumProject\\Drivers\\chromedriver.exe");
+		System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"SeleniumProject\\Drivers\\geckodriver.exe");
 	}
 	@SuppressWarnings("deprecation")
 	@BeforeMethod
@@ -31,7 +32,7 @@ public class BaseClass {
 		else {
 			DesiredCapabilities capabilitiesfirefox = DesiredCapabilities.firefox();
 			capabilitiesfirefox.setCapability(CapabilityType.BROWSER_NAME,"firefox");
-			driver=new ChromeDriver(capabilitiesfirefox);
+			driver=new FirefoxDriver(capabilitiesfirefox);
 		}
 		
 	}
