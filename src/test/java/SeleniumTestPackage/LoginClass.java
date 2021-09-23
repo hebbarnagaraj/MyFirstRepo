@@ -14,12 +14,14 @@ public class LoginClass extends BaseClass{
 		driver.manage().deleteAllCookies();
 		
 		driver.get("https://opensource-demo.orangehrmlive.com/");
+		Thread.sleep(20000);
 		driver.manage().window().maximize();
-		Thread.sleep(5000);
+		Thread.sleep(20000);
 		LoginPage loginpage = new LoginPage(driver);
 		loginpage.setuserName(userName);
 		loginpage.setPassword(passWord);
 		loginpage.clickLogin();
+		Thread.sleep(20000);
 		loginpage.verifyDashboard();
 	}
 	

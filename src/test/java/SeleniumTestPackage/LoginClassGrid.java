@@ -14,8 +14,9 @@ public class LoginClassGrid extends BaseClassGrid{
 	public void testlogin() throws Exception {
 		driver.manage().deleteAllCookies();
 		driver.get("https://opensource-demo.orangehrmlive.com/");
+		Thread.sleep(10000);
 		driver.manage().window().maximize();
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		LoginPage loginpage = new LoginPage(driver);
 		loginpage.setuserName(userName);
 		loginpage.setPassword(passWord);
