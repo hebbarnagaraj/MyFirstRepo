@@ -3,13 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="SeleniumTestPackage.LoginClass">
+      <class name="SeleniumTestPackage.LoginParallelTesting">
         <methods>
-          <include name="testlogin"/>
-          <include name="setup"/>
-          <include name="teardown"/>
+          <include name="testloginparallel"/>
         </methods>
-      </class> <!-- SeleniumTestPackage.LoginClass -->
+      </class> <!-- SeleniumTestPackage.LoginParallelTesting -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,43 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="2" failed="0" total="2" passed="0">
   <reporter-output>
-    <line>
-      <![CDATA[-----------Entered Username--------]]>
-    </line>
-    <line>
-      <![CDATA[-----------Entered Password--------]]>
-    </line>
-    <line>
-      <![CDATA[----------Dashboard is visible--------]]>
-    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="88149" started-at="2021-09-23T07:10:38Z" finished-at="2021-09-23T07:12:06Z">
+  <suite name="Suite" duration-ms="255" started-at="2021-09-24T14:08:03Z" finished-at="2021-09-24T14:08:03Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="88149" started-at="2021-09-23T07:10:38Z" finished-at="2021-09-23T07:12:06Z">
-      <class name="SeleniumTestPackage.LoginClass">
-        <test-method status="PASS" signature="setup()[pri:0, instance:SeleniumTestPackage.LoginClass@1e127982]" name="setup" is-config="true" duration-ms="4237" started-at="2021-09-23T12:40:38Z" finished-at="2021-09-23T12:40:42Z">
+    <test name="Test" duration-ms="213" started-at="2021-09-24T14:08:03Z" finished-at="2021-09-24T14:08:03Z">
+      <class name="SeleniumTestPackage.LoginParallelTesting">
+        <test-method status="FAIL" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:SeleniumTestPackage.LoginParallelTesting@2928854b]" name="setup" is-config="true" duration-ms="0" started-at="2021-09-24T19:38:03Z" finished-at="2021-09-24T19:38:03Z">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Method setup requires 2 parameters but 1 were supplied in the @Configuration annotation.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Method setup requires 2 parameters but 1 were supplied in the @Configuration annotation.
+	at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:193)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:129)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:370)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:86)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:202)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:590)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:811)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1137)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="testlogin()[pri:0, instance:SeleniumTestPackage.LoginClass@1e127982]" name="testlogin" duration-ms="83208" started-at="2021-09-23T12:40:42Z" finished-at="2021-09-23T12:42:05Z">
+        <test-method status="SKIP" signature="testlogin(java.lang.String, java.lang.String)[pri:0, instance:SeleniumTestPackage.LoginParallelTesting@2928854b]" name="testlogin" duration-ms="8" started-at="2021-09-24T19:38:03Z" finished-at="2021-09-24T19:38:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin123]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
-            <line>
-              <![CDATA[-----------Entered Username--------]]>
-            </line>
-            <line>
-              <![CDATA[-----------Entered Password--------]]>
-            </line>
-            <line>
-              <![CDATA[----------Dashboard is visible--------]]>
-            </line>
           </reporter-output>
         </test-method> <!-- testlogin -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:SeleniumTestPackage.LoginClass@1e127982]" name="teardown" is-config="true" duration-ms="686" started-at="2021-09-23T12:42:05Z" finished-at="2021-09-23T12:42:06Z">
+        <test-method status="SKIP" signature="teardown()[pri:0, instance:SeleniumTestPackage.LoginParallelTesting@2928854b]" name="teardown" is-config="true" duration-ms="0" started-at="2021-09-24T19:38:03Z" finished-at="2021-09-24T19:38:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- SeleniumTestPackage.LoginClass -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- SeleniumTestPackage.LoginParallelTesting -->
+    </test> <!-- Test -->
+    <test name="Test1" duration-ms="20" started-at="2021-09-24T14:08:03Z" finished-at="2021-09-24T14:08:03Z">
+      <class name="SeleniumTestPackage.LoginParallelTesting">
+        <test-method status="FAIL" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:SeleniumTestPackage.LoginParallelTesting@6dbb137d]" name="setup" is-config="true" duration-ms="0" started-at="2021-09-24T19:38:03Z" finished-at="2021-09-24T19:38:03Z">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Method setup requires 2 parameters but 1 were supplied in the @Configuration annotation.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Method setup requires 2 parameters but 1 were supplied in the @Configuration annotation.
+	at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:193)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:129)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:370)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:86)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:202)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:590)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:811)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1137)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="SKIP" signature="testlogin(java.lang.String, java.lang.String)[pri:0, instance:SeleniumTestPackage.LoginParallelTesting@6dbb137d]" name="testlogin" duration-ms="3" started-at="2021-09-24T19:38:03Z" finished-at="2021-09-24T19:38:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testlogin -->
+        <test-method status="SKIP" signature="teardown()[pri:0, instance:SeleniumTestPackage.LoginParallelTesting@6dbb137d]" name="teardown" is-config="true" duration-ms="0" started-at="2021-09-24T19:38:03Z" finished-at="2021-09-24T19:38:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- SeleniumTestPackage.LoginParallelTesting -->
+    </test> <!-- Test1 -->
+  </suite> <!-- Suite -->
 </testng-results>
