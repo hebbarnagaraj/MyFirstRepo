@@ -1,31 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="methods">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
   <parameter name="passWord" value="admin123"/>
   <parameter name="browser" value="firefox"/>
   <parameter name="userName" value="Admin"/>
-  <test name="Test(failed)" parallel="methods">
-    <parameter name="passWord" value="admin123"/>
-    <parameter name="browser" value="chrome"/>
-    <parameter name="userName" value="Admin"/>
-    <classes>
-      <class name="SeleniumTestPackage.LoginParallelTesting">
-        <methods>
-          <include name="testlogin"/>
-        </methods>
-      </class> <!-- SeleniumTestPackage.LoginParallelTesting -->
-    </classes>
-  </test> <!-- Test(failed) -->
-  <test name="Test1(failed)" parallel="methods">
+  <parameter name="URL" value="http://192.168.9.175:4444/wd/hub"/>
+  <test name="Test2(failed)" parallel="tests">
     <parameter name="passWord" value="admin123"/>
     <parameter name="browser" value="firefox"/>
     <parameter name="userName" value="Admin"/>
+    <parameter name="URL" value="http://192.168.9.175:4444/wd/hub"/>
     <classes>
-      <class name="SeleniumTestPackage.LoginParallelTesting">
+      <class name="SeleniumTestPackage.LoginClassGrid">
         <methods>
-          <include name="testlogin"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="testloginchrome"/>
         </methods>
-      </class> <!-- SeleniumTestPackage.LoginParallelTesting -->
+      </class> <!-- SeleniumTestPackage.LoginClassGrid -->
+    </classes>
+  </test> <!-- Test2(failed) -->
+  <test name="Test1(failed)" parallel="tests">
+    <parameter name="passWord" value="admin123"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="userName" value="Admin"/>
+    <parameter name="URL" value="http://192.168.9.175:4444/wd/hub"/>
+    <classes>
+      <class name="SeleniumTestPackage.LoginClassGrid">
+        <methods>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="testloginchrome"/>
+        </methods>
+      </class> <!-- SeleniumTestPackage.LoginClassGrid -->
     </classes>
   </test> <!-- Test1(failed) -->
 </suite> <!-- Failed suite [Suite] -->

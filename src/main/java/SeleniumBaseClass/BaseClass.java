@@ -14,6 +14,7 @@ import org.testng.annotations.BeforeMethod;
 public class BaseClass {
 	
 	String browser = System.getProperty("browser");
+	
 	public WebDriver driver;
 	
 	static {
