@@ -1,38 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="methods">
   <parameter name="passWord" value="admin123"/>
-  <parameter name="browser" value="firefox"/>
+  <parameter name="browser" value="chrome"/>
   <parameter name="userName" value="Admin"/>
-  <parameter name="URL" value="http://192.168.9.175:4444/wd/hub"/>
-  <test name="Test2(failed)" parallel="tests">
-    <parameter name="passWord" value="admin123"/>
-    <parameter name="browser" value="firefox"/>
-    <parameter name="userName" value="Admin"/>
-    <parameter name="URL" value="http://192.168.9.175:4444/wd/hub"/>
+  <parameter name="URL" value="http://192.168.99.175:4444/wd/hub"/>
+  <test name="Test(failed)" parallel="methods">
     <classes>
-      <class name="SeleniumTestPackage.LoginClassGrid">
+      <class name="SeleniumTestPackage.SeleniumGrid">
         <methods>
+          <include name="testlogin"/>
           <include name="setup"/>
-          <include name="setup"/>
-          <include name="testloginchrome"/>
         </methods>
-      </class> <!-- SeleniumTestPackage.LoginClassGrid -->
+      </class> <!-- SeleniumTestPackage.SeleniumGrid -->
     </classes>
-  </test> <!-- Test2(failed) -->
-  <test name="Test1(failed)" parallel="tests">
-    <parameter name="passWord" value="admin123"/>
-    <parameter name="browser" value="chrome"/>
-    <parameter name="userName" value="Admin"/>
-    <parameter name="URL" value="http://192.168.9.175:4444/wd/hub"/>
-    <classes>
-      <class name="SeleniumTestPackage.LoginClassGrid">
-        <methods>
-          <include name="setup"/>
-          <include name="setup"/>
-          <include name="testloginchrome"/>
-        </methods>
-      </class> <!-- SeleniumTestPackage.LoginClassGrid -->
-    </classes>
-  </test> <!-- Test1(failed) -->
+  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

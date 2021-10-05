@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="methods">
+  <parameter name="passWord" value="admin123"/>
+  <parameter name="browser" value="chrome"/>
+  <parameter name="userName" value="Admin"/>
+  <parameter name="URL" value="http://192.168.99.175:4444/wd/hub"/>
+  <test name="Test(failed)" parallel="methods">
     <classes>
-      <class name="SeleniumTestPackage.LoginClassGrid">
+      <class name="SeleniumTestPackage.SeleniumGrid">
         <methods>
+          <include name="testlogin"/>
           <include name="setup"/>
-          <include name="testloginchrome"/>
         </methods>
-      </class> <!-- SeleniumTestPackage.LoginClassGrid -->
+      </class> <!-- SeleniumTestPackage.SeleniumGrid -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

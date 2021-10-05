@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
+    <line>
+      <![CDATA[-----------Entered Username--------]]>
+    </line>
+    <line>
+      <![CDATA[-----------Entered Password--------]]>
+    </line>
     <line>
       <![CDATA[-----------Entered Username--------]]>
     </line>
@@ -10,17 +16,44 @@
     <line>
       <![CDATA[----------Dashboard is visible--------]]>
     </line>
+    <line>
+      <![CDATA[----------Dashboard is visible--------]]>
+    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="40571" started-at="2021-09-29T12:30:11Z" finished-at="2021-09-29T12:30:51Z">
+  <suite name="Suite" duration-ms="82916" started-at="2021-10-05T06:00:24Z" finished-at="2021-10-05T06:01:47Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="40571" started-at="2021-09-29T12:30:11Z" finished-at="2021-09-29T12:30:51Z">
-      <class name="SeleniumTestPackage.LoginClassGrid">
-        <test-method status="PASS" signature="setup()[pri:0, instance:SeleniumTestPackage.LoginClassGrid@65d6b83b]" name="setup" is-config="true" duration-ms="6189" started-at="2021-09-29T18:00:11Z" finished-at="2021-09-29T18:00:17Z">
+    <test name="Testchrome" duration-ms="78406" started-at="2021-10-05T06:00:24Z" finished-at="2021-10-05T06:01:43Z">
+      <class name="SeleniumTestPackage.SeleniumGrid">
+        <test-method status="PASS" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:SeleniumTestPackage.SeleniumGrid@2928854b]" name="setup" is-config="true" duration-ms="4581" started-at="2021-10-05T11:30:24Z" finished-at="2021-10-05T11:30:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[http://192.168.99.175:4444/wd/hub]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="testloginchrome()[pri:0, instance:SeleniumTestPackage.LoginClassGrid@65d6b83b]" name="testloginchrome" duration-ms="33477" started-at="2021-09-29T18:00:17Z" finished-at="2021-09-29T18:00:50Z">
+        <test-method status="PASS" signature="testlogin(java.lang.String, java.lang.String)[pri:0, instance:SeleniumTestPackage.SeleniumGrid@2928854b]" name="testlogin" duration-ms="73684" started-at="2021-10-05T11:30:29Z" finished-at="2021-10-05T11:31:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin123]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
             <line>
               <![CDATA[-----------Entered Username--------]]>
@@ -32,12 +65,61 @@
               <![CDATA[----------Dashboard is visible--------]]>
             </line>
           </reporter-output>
-        </test-method> <!-- testloginchrome -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:SeleniumTestPackage.LoginClassGrid@65d6b83b]" name="teardown" is-config="true" duration-ms="717" started-at="2021-09-29T18:00:50Z" finished-at="2021-09-29T18:00:51Z">
+        </test-method> <!-- testlogin -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:SeleniumTestPackage.SeleniumGrid@2928854b]" name="teardown" is-config="true" duration-ms="91" started-at="2021-10-05T11:31:42Z" finished-at="2021-10-05T11:31:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- SeleniumTestPackage.LoginClassGrid -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- SeleniumTestPackage.SeleniumGrid -->
+    </test> <!-- Testchrome -->
+    <test name="Testfirefox" duration-ms="82916" started-at="2021-10-05T06:00:24Z" finished-at="2021-10-05T06:01:47Z">
+      <class name="SeleniumTestPackage.SeleniumGrid">
+        <test-method status="PASS" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:SeleniumTestPackage.SeleniumGrid@6dbb137d]" name="setup" is-config="true" duration-ms="10943" started-at="2021-10-05T11:30:24Z" finished-at="2021-10-05T11:30:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[http://192.168.99.175:4444/wd/hub]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="testlogin(java.lang.String, java.lang.String)[pri:0, instance:SeleniumTestPackage.SeleniumGrid@6dbb137d]" name="testlogin" duration-ms="70155" started-at="2021-10-05T11:30:35Z" finished-at="2021-10-05T11:31:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[-----------Entered Username--------]]>
+            </line>
+            <line>
+              <![CDATA[-----------Entered Password--------]]>
+            </line>
+            <line>
+              <![CDATA[----------Dashboard is visible--------]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testlogin -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:SeleniumTestPackage.SeleniumGrid@6dbb137d]" name="teardown" is-config="true" duration-ms="1775" started-at="2021-10-05T11:31:45Z" finished-at="2021-10-05T11:31:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- SeleniumTestPackage.SeleniumGrid -->
+    </test> <!-- Testfirefox -->
+  </suite> <!-- Suite -->
 </testng-results>
