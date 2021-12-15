@@ -24,6 +24,8 @@ import com.google.common.io.Files;
 import com.orangehrmlive.demo.pages.homePage;
 import com.orangehrmlive.demo.pages.loginPage;
 
+import io.qameta.allure.Attachment;
+
 public class testBaseClass {
 	
 	
@@ -115,6 +117,8 @@ public class testBaseClass {
 	public static void jsClick(WebElement element) {
 		((JavascriptExecutor)driver).executeScript("arguments[0].click();", element);
 	}
+	
+	@Attachment
 	public static void takeScreenshot() {
 		try {
 			File destFile = new File(errordestfilePath);
