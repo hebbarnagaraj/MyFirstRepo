@@ -1,3 +1,4 @@
-SeleniumBaseClass\BaseclassGird.class
-Pages\LoginPage.class
-SeleniumBaseClass\BaseClass.class
+com\orangehrmlive\demo\base\testBaseClass.class
+com\orangehrmlive\demo\pages\homePage.class
+com\orangehrmlive\demo\pages\loginPage.class
+com\orangehrmlive\demo\pages\userManagement.class

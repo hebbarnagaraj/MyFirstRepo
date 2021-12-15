@@ -13,13 +13,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.remote.CapabilityType;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 
 import com.google.common.io.Files;
 import com.orangehrmlive.demo.pages.homePage;
@@ -38,23 +37,18 @@ public class testBaseClass {
 	String propsfilepath=System.getProperty("user.dir")+"\\properties\\Globalproperties.properties";
 	static String errordestfilePath=System.getProperty("user.dir")+"\\Screenshots\\Error"+time+".png";
 	String browser=System.getProperty("browser");
-	
-	
-	
-	public DesiredCapabilities dc;
+
 	public static WebDriver driver;
-	public FileInputStream fs;
-	
-	
 	Properties props=new Properties();
-	loginPage lPage=new loginPage(driver);
-	homePage hPage=new homePage(driver);
+	public FileInputStream fs;
+	loginPage lPage;
+	homePage hPage;
 	
 	
-	@SuppressWarnings("deprecation")
-	@BeforeClass
-	public void setUp() {
-		
+	
+	@BeforeMethod
+	public void setUp() throws Exception {
+
 		try {
 			fs=new FileInputStream(propsfilepath);
 			props.load(fs);
@@ -62,53 +56,54 @@ public class testBaseClass {
 			
 			e.printStackTrace();
 		}
-		
 		if(browser.equalsIgnoreCase("chrome")) {
-			
-			dc=DesiredCapabilities.chrome();
-			dc.setCapability(CapabilityType.BROWSER_NAME, "chrome");
-			dc.setCapability(CapabilityType.PLATFORM, "windows");
-			driver=new ChromeDriver(dc);
+			driver=new ChromeDriver();
 			driver.manage().deleteAllCookies();
 			driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 			driver.manage().window().maximize();
 		}
 		else {
-			dc=DesiredCapabilities.firefox();
-			dc.setCapability(CapabilityType.BROWSER_NAME, "firefox");
-			dc.setCapability(CapabilityType.PLATFORM, "windows");
-			driver=new FirefoxDriver(dc);
+			driver=new FirefoxDriver();
 			driver.manage().deleteAllCookies();
 			driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 			driver.manage().window().maximize();
 		}
+		
+		lPage=new loginPage(driver);
+		hPage=new homePage(driver);
+		driver.get(props.getProperty("URL"));
+		Thread.sleep(10000);
+		waitforElementVisible(lPage.getUserName());
+		lPage.getUserName().sendKeys(props.getProperty("userName"));
+		lPage.getPassWOrd().sendKeys(props.getProperty("passWord"));
+		lPage.getLoginBtn().click();
+		Thread.sleep(10000);
+		if(hPage.getInvalidCred().isDisplayed()) {
+			takeScreenshot();
+			Assert.fail();
+		}
+		waitforElementVisible(hPage.getDashBoardlink());
+		if(!hPage.getDashBoardlink().isDisplayed()) {
+			takeScreenshot();
+			Assert.fail();
+		}
 	}
 	
-	@AfterClass
+	@AfterMethod (alwaysRun=true)
 	public void tearDown() {
 		driver.quit();
 	}
 	
-	@BeforeTest
-	public void loginOrgangeHRM() {
-		
-		driver.get(props.getProperty("URL"));
-		waitforElementCLickable(lPage.getUserName());
-		lPage.getUserName().sendKeys(props.getProperty("userName"));
-		lPage.getPassWOrd().sendKeys(props.getProperty("passWord"));
-		lPage.getLoginBtn().click();
-		waitforElementCLickable(hPage.getDashBoardlink());
-		if(!hPage.getDashBoardlink().isDisplayed()) {
-			takeScreenshot();
-			System.out.println("login Failed and Screenshot is captured under file : "+errordestfilePath);
-		}
-	}
 	
 	public static void waitforElementCLickable(WebElement element) {
 		WebDriverWait wait = new WebDriverWait(driver, 100);
 		wait.until(ExpectedConditions.elementToBeClickable(element));
+	}
+	public static void waitforElementVisible(WebElement element) {
+		WebDriverWait wait = new WebDriverWait(driver, 100);
+		wait.until(ExpectedConditions.visibilityOf(element));
 	}
 	public static void waitforelementToBeSelected(WebElement element) {
 		WebDriverWait wait = new WebDriverWait(driver, 100);
@@ -125,8 +120,25 @@ public class testBaseClass {
 			File destFile = new File(errordestfilePath);
 			File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 			Files.copy(srcFile, destFile);
+			System.out.println("Screemshot stored at location : "+errordestfilePath);
+			
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public static void selectByindex(WebElement element , int index) {
+		Select select=new Select(element);
+		select.selectByIndex(index);
+	}
+	
+	public static void selectByValue(WebElement element , String value) {
+		Select select=new Select(element);
+		select.selectByValue(value);
+	}
+	
+	public static void selectByvisibleText(WebElement element , String text) {
+		Select select=new Select(element);
+		select.selectByVisibleText(text);
 	}
 }

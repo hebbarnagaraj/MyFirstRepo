@@ -1,43 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="1" failed="0" total="1" passed="0">
   <reporter-output>
-    <line>
-      <![CDATA[-----------Entered Username--------]]>
-    </line>
-    <line>
-      <![CDATA[-----------Entered Password--------]]>
-    </line>
-    <line>
-      <![CDATA[----------Dashboard is visible--------]]>
-    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="95590" started-at="2021-12-05T14:22:33Z" finished-at="2021-12-05T14:24:09Z">
+  <suite name="Default suite" duration-ms="34390" started-at="2021-12-15T10:41:02Z" finished-at="2021-12-15T10:41:36Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="95590" started-at="2021-12-05T14:22:33Z" finished-at="2021-12-05T14:24:09Z">
-      <class name="SeleniumTestPackage.LoginClass">
-        <test-method status="PASS" signature="setup()[pri:0, instance:SeleniumTestPackage.LoginClass@2928854b]" name="setup" is-config="true" duration-ms="14200" started-at="2021-12-05T19:52:33Z" finished-at="2021-12-05T19:52:47Z">
+    <test name="Default test" duration-ms="34390" started-at="2021-12-15T10:41:02Z" finished-at="2021-12-15T10:41:36Z">
+      <class name="com.orangehrmlive.demo.TestSuites.TestList_UserManagement">
+        <test-method status="FAIL" signature="setUp()[pri:0, instance:com.orangehrmlive.demo.TestSuites.TestList_UserManagement@75329a49]" name="setUp" is-config="true" duration-ms="0" started-at="2021-12-15T16:11:02Z" finished-at="2021-12-15T16:11:02Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: null
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.fail(Assert.java:101)
+	at com.orangehrmlive.demo.base.testBaseClass.setUp(testBaseClass.java:85)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:216)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:590)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:823)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:778)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1225)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1150)
+	at org.testng.TestNG.runSuites(TestNG.java:1075)
+	at org.testng.TestNG.run(TestNG.java:1047)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="testlogin()[pri:0, instance:SeleniumTestPackage.LoginClass@2928854b]" name="testlogin" duration-ms="80506" started-at="2021-12-05T19:52:47Z" finished-at="2021-12-05T19:54:08Z">
-          <reporter-output>
-            <line>
-              <![CDATA[-----------Entered Username--------]]>
-            </line>
-            <line>
-              <![CDATA[-----------Entered Password--------]]>
-            </line>
-            <line>
-              <![CDATA[----------Dashboard is visible--------]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- testlogin -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:SeleniumTestPackage.LoginClass@2928854b]" name="teardown" is-config="true" duration-ms="834" started-at="2021-12-05T19:54:08Z" finished-at="2021-12-05T19:54:09Z">
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="testuserManagementsuite()[pri:0, instance:com.orangehrmlive.demo.TestSuites.TestList_UserManagement@75329a49]" name="testuserManagementsuite" duration-ms="17" started-at="2021-12-15T16:11:36Z" finished-at="2021-12-15T16:11:36Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- SeleniumTestPackage.LoginClass -->
+        </test-method> <!-- testuserManagementsuite -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.orangehrmlive.demo.TestSuites.TestList_UserManagement@75329a49]" name="tearDown" is-config="true" duration-ms="698" started-at="2021-12-15T16:11:36Z" finished-at="2021-12-15T16:11:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.orangehrmlive.demo.TestSuites.TestList_UserManagement -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

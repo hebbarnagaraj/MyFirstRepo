@@ -5,18 +5,18 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class loginPage {
+public class loginPage{
 	
 	
-	@FindBy(xpath="//*[@id='txtUsername']")
+	@FindBy(xpath="//div/*[@id='txtUsername']")
 	private WebElement userName;
-	
 
-	@FindBy(xpath="//*[@id='txtPassword']")
+
+	@FindBy(xpath="//div/*[@id='txtPassword']")
 	private WebElement passWOrd;
 	
 
-	@FindBy(xpath="//*[@id='btnLogin']")
+	@FindBy(xpath="//div/*[@id='btnLogin']")
 	private WebElement loginBtn;
 	
 	public loginPage(WebDriver driver) {

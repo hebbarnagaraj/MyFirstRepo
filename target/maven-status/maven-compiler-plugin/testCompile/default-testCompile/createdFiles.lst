@@ -1,2 +1,4 @@
-SeleniumTestPackage\LoginClass.class
-SeleniumTestPackage\SeleniumGrid.class
+com\orangehrmlive\demo\userManagementTest\SearchUser.class
+com\orangehrmlive\demo\TestSuites\TestList_UserManagement.class
+com\orangehrmlive\demo\userManagementTest\DeleteUser.class
+com\orangehrmlive\demo\userManagementTest\AddUser.class

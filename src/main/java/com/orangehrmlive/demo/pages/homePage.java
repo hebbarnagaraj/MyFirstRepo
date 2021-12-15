@@ -11,9 +11,22 @@ public class homePage {
 	@FindBy(xpath="//a[.='Dashboard']")
 	private WebElement dashBoardlink;
 	
+	@FindBy(xpath="//div/span[.='Invalid credentials']")
+	private WebElement invalidCred;
+	
 	
 	public homePage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
+	}
+
+
+	public WebElement getInvalidCred() {
+		return invalidCred;
+	}
+
+
+	public void setInvalidCred(WebElement invalidCred) {
+		this.invalidCred = invalidCred;
 	}
 
 
