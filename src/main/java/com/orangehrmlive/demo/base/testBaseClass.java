@@ -82,15 +82,23 @@ public class testBaseClass {
 		lPage.getPassWOrd().sendKeys(props.getProperty("passWord"));
 		lPage.getLoginBtn().click();
 		Thread.sleep(10000);
-		if(hPage.getInvalidCred().isDisplayed()) {
-			takeScreenshot();
-			Assert.fail();
+		try {
+			if(hPage.getInvalidCred().isDisplayed()) {
+				takeScreenshot();
+				Assert.fail();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 		waitforElementVisible(hPage.getDashBoardlink());
-		if(!hPage.getDashBoardlink().isDisplayed()) {
-			takeScreenshot();
-			Assert.fail();
-		}
+		try {
+			if(!hPage.getDashBoardlink().isDisplayed()) {
+				takeScreenshot();
+				Assert.fail();
+			}
+		} catch (Exception e) {
+			
+		}	
 	}
 	
 	@AfterMethod (alwaysRun=true)

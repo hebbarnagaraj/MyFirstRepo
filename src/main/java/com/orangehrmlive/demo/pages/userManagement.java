@@ -57,10 +57,25 @@ public class userManagement {
 	@FindBy(xpath="//input[@id='dialogDeleteBtn']")
 	private WebElement confirmDeletebtn;
 	
+	@FindBy(xpath="//div/span[@id='systemUser_password_strength_meter']")
+	private WebElement strengthMeter;
+	
 	
 	
 	public userManagement(WebDriver driver) {
 		PageFactory.initElements(driver, this);
+	}
+
+
+
+	public WebElement getStrengthMeter() {
+		return strengthMeter;
+	}
+
+
+
+	public void setStrengthMeter(WebElement strengthMeter) {
+		this.strengthMeter = strengthMeter;
 	}
 
 

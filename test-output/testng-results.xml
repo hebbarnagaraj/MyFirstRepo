@@ -2,21 +2,52 @@
 <testng-results skipped="1" failed="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="34390" started-at="2021-12-15T10:41:02Z" finished-at="2021-12-15T10:41:36Z">
+  <suite name="Default suite" duration-ms="58982" started-at="2021-12-16T02:38:10Z" finished-at="2021-12-16T02:39:09Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="34390" started-at="2021-12-15T10:41:02Z" finished-at="2021-12-15T10:41:36Z">
+    <test name="Default test" duration-ms="58982" started-at="2021-12-16T02:38:10Z" finished-at="2021-12-16T02:39:09Z">
       <class name="com.orangehrmlive.demo.TestSuites.TestList_UserManagement">
-        <test-method status="FAIL" signature="setUp()[pri:0, instance:com.orangehrmlive.demo.TestSuites.TestList_UserManagement@75329a49]" name="setUp" is-config="true" duration-ms="0" started-at="2021-12-15T16:11:02Z" finished-at="2021-12-15T16:11:02Z">
-          <exception class="java.lang.AssertionError">
+        <test-method status="FAIL" signature="setUp()[pri:0, instance:com.orangehrmlive.demo.TestSuites.TestList_UserManagement@1e802ef9]" name="setUp" is-config="true" duration-ms="0" started-at="2021-12-16T08:08:10Z" finished-at="2021-12-16T08:08:10Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[null]]>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div/span[.='Invalid credentials']"}
+  (Session info: chrome=96.0.4664.110)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-JF65BFTU', ip: '192.168.225.50', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_301'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.110, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\nagar\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:59730}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f238a9b250295d7c57f7cd9ba13047b8
+*** Element info: {Using=xpath, value=//div/span[.='Invalid credentials']}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: null
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.fail(Assert.java:101)
-	at com.orangehrmlive.demo.base.testBaseClass.setUp(testBaseClass.java:85)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div/span[.='Invalid credentials']"}
+  (Session info: chrome=96.0.4664.110)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-JF65BFTU', ip: '192.168.225.50', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_301'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.110, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\nagar\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:59730}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f238a9b250295d7c57f7cd9ba13047b8
+*** Element info: {Using=xpath, value=//div/span[.='Invalid credentials']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy10.isDisplayed(Unknown Source)
+	at com.orangehrmlive.demo.base.testBaseClass.setUp(testBaseClass.java:86)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -46,15 +77,15 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="SKIP" signature="testuserManagementsuite()[pri:0, instance:com.orangehrmlive.demo.TestSuites.TestList_UserManagement@75329a49]" name="testuserManagementsuite" duration-ms="17" started-at="2021-12-15T16:11:36Z" finished-at="2021-12-15T16:11:36Z">
+        <test-method status="SKIP" signature="testuserManagementsuite()[pri:0, instance:com.orangehrmlive.demo.TestSuites.TestList_UserManagement@1e802ef9]" name="testuserManagementsuite" duration-ms="11" started-at="2021-12-16T08:09:08Z" finished-at="2021-12-16T08:09:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testuserManagementsuite -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.orangehrmlive.demo.TestSuites.TestList_UserManagement@75329a49]" name="tearDown" is-config="true" duration-ms="698" started-at="2021-12-15T16:11:36Z" finished-at="2021-12-15T16:11:36Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.orangehrmlive.demo.TestSuites.TestList_UserManagement@1e802ef9]" name="tearDown" is-config="true" duration-ms="714" started-at="2021-12-16T08:09:08Z" finished-at="2021-12-16T08:09:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

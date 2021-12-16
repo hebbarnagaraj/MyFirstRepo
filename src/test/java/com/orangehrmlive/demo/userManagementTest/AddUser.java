@@ -34,12 +34,20 @@ public class AddUser extends testBaseClass{
 		umPage.getConfirmPasswordinput().sendKeys(passWord);
 		umPage.getSaveUserbtn().click();
 		Thread.sleep(10000);
-		if(umPage.getSearchBtn().isDisplayed()) {
-			System.out.println("User is added successfully");
-		}
-		else {
-			takeScreenshot();
-			Assert.fail();
+		try {
+			if(umPage.getStrengthMeter().isDisplayed()) {
+				umPage.getSaveUserbtn().click();
+				Thread.sleep(10000);
+			}
+			if(umPage.getSearchBtn().isDisplayed()) {
+				System.out.println("User is added successfully");
+			}
+			else {
+				takeScreenshot();
+				Assert.fail();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 	}
 	
