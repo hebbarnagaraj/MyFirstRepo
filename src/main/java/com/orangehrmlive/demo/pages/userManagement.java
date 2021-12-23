@@ -8,14 +8,9 @@ import org.openqa.selenium.support.PageFactory;
 public class userManagement {
 	
 	
-	@FindBy(xpath="//div[@id='mainMenu']//a[.='Admin']")
-	private WebElement Admintag;
-	
 	@FindBy(xpath="//div[@id='mainMenu']//a[.='User Management']")
 	private WebElement userManagementtag;
 	
-	@FindBy(xpath="//input[@id='btnAdd']")
-	private WebElement addUserbtn;
 	
 	@FindBy(xpath="//select[@id='systemUser_userType']")
 	private WebElement userRoleSelect;
@@ -34,9 +29,6 @@ public class userManagement {
 	
 	@FindBy(xpath="//input[@id='systemUser_confirmPassword']")
 	private WebElement confirmPasswordinput;
-	
-	@FindBy(xpath="//input[@id='btnSave']")
-	private WebElement saveUserbtn;
 	
 	@FindBy(xpath="//input[@id='searchSystemUser_userName']")
 	private WebElement userNametag;
@@ -67,7 +59,6 @@ public class userManagement {
 	}
 
 
-
 	public WebElement getStrengthMeter() {
 		return strengthMeter;
 	}
@@ -77,20 +68,6 @@ public class userManagement {
 	public void setStrengthMeter(WebElement strengthMeter) {
 		this.strengthMeter = strengthMeter;
 	}
-
-
-
-	public WebElement getAddUserbtn() {
-		return addUserbtn;
-	}
-
-
-
-	public void setAddUserbtn(WebElement addUserbtn) {
-		this.addUserbtn = addUserbtn;
-	}
-
-
 
 	public WebElement getDeleteUserbtn() {
 		return deleteUserbtn;
@@ -126,17 +103,6 @@ public class userManagement {
 		this.selectTabelusercheckbox = selectTabelusercheckbox;
 	}
 
-
-
-	public WebElement getAdmintag() {
-		return Admintag;
-	}
-
-
-
-	public void setAdmintag(WebElement admintag) {
-		Admintag = admintag;
-	}
 
 
 
@@ -222,17 +188,6 @@ public class userManagement {
 		this.confirmPasswordinput = confirmPasswordinput;
 	}
 
-
-
-	public WebElement getSaveUserbtn() {
-		return saveUserbtn;
-	}
-
-
-
-	public void setSaveUserbtn(WebElement saveUserbtn) {
-		this.saveUserbtn = saveUserbtn;
-	}
 
 
 

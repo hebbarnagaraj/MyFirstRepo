@@ -1,26 +1,28 @@
 package com.orangehrmlive.demo.base;
 
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import com.google.common.io.Files;
+import com.orangehrmlive.demo.Utils.WebDriverWaitUtils;
 import com.orangehrmlive.demo.pages.homePage;
 import com.orangehrmlive.demo.pages.loginPage;
 
@@ -38,6 +40,7 @@ public class testBaseClass {
 	static long time=System.currentTimeMillis();
 	String propsfilepath=System.getProperty("user.dir")+"\\properties\\Globalproperties.properties";
 	static String errordestfilePath=System.getProperty("user.dir")+"\\Screenshots\\Error"+time+".png";
+	static String attachmentfilepath=System.getProperty("user.dir")+"\\Attachments\\Attachment.txt.txt";
 	String browser=System.getProperty("browser");
 
 	public static WebDriver driver;
@@ -45,7 +48,6 @@ public class testBaseClass {
 	public FileInputStream fs;
 	loginPage lPage;
 	homePage hPage;
-	
 	
 	
 	@BeforeMethod
@@ -77,7 +79,7 @@ public class testBaseClass {
 		hPage=new homePage(driver);
 		driver.get(props.getProperty("URL"));
 		Thread.sleep(10000);
-		waitforElementVisible(lPage.getUserName());
+		WebDriverWaitUtils.waitforElementVisible(lPage.getUserName(), driver);
 		lPage.getUserName().sendKeys(props.getProperty("userName"));
 		lPage.getPassWOrd().sendKeys(props.getProperty("passWord"));
 		lPage.getLoginBtn().click();
@@ -90,7 +92,7 @@ public class testBaseClass {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		waitforElementVisible(hPage.getDashBoardlink());
+		WebDriverWaitUtils.waitforElementVisible(hPage.getDashBoardlink(),driver);
 		try {
 			if(!hPage.getDashBoardlink().isDisplayed()) {
 				takeScreenshot();
@@ -107,24 +109,8 @@ public class testBaseClass {
 	}
 	
 	
-	public static void waitforElementCLickable(WebElement element) {
-		WebDriverWait wait = new WebDriverWait(driver, 100);
-		wait.until(ExpectedConditions.elementToBeClickable(element));
-	}
-	public static void waitforElementVisible(WebElement element) {
-		WebDriverWait wait = new WebDriverWait(driver, 100);
-		wait.until(ExpectedConditions.visibilityOf(element));
-	}
-	public static void waitforelementToBeSelected(WebElement element) {
-		WebDriverWait wait = new WebDriverWait(driver, 100);
-		wait.until(ExpectedConditions.elementToBeSelected(element));
-	}
-	public static void jsScrolltoElement(WebElement element) {
-		((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);", element);
-	}
-	public static void jsClick(WebElement element) {
-		((JavascriptExecutor)driver).executeScript("arguments[0].click();", element);
-	}
+	
+	
 	
 	@Attachment
 	public static void takeScreenshot() {
@@ -152,5 +138,23 @@ public class testBaseClass {
 	public static void selectByvisibleText(WebElement element , String text) {
 		Select select=new Select(element);
 		select.selectByVisibleText(text);
+	}
+	public static void attAttachment() {
+		
+		try {
+			Robot rb = new Robot();
+			StringSelection ss = new StringSelection(attachmentfilepath);
+			Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
+			rb.keyPress(KeyEvent.VK_CONTROL);
+			rb.keyPress(KeyEvent.VK_V);
+			rb.keyRelease(KeyEvent.VK_V);
+			rb.keyRelease(KeyEvent.VK_CONTROL);
+			rb.keyPress(KeyEvent.VK_ENTER);
+			rb.keyRelease(KeyEvent.VK_ENTER);
+			Thread.sleep(10000);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
 	}
 }

@@ -4,7 +4,9 @@ import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.orangehrmlive.demo.Utils.WebDriverWaitUtils;
 import com.orangehrmlive.demo.base.testBaseClass;
+import com.orangehrmlive.demo.pages.commanPage;
 import com.orangehrmlive.demo.pages.userManagement;
 
 public class AddUser extends testBaseClass{
@@ -13,17 +15,18 @@ public class AddUser extends testBaseClass{
 	String employeeName=System.getProperty("employeeName");
 	String userNametext=System.getProperty("userNametext");
 	String passWord=System.getProperty("passWord");
-	userManagement umPage;
+	userManagement umPage=new userManagement(driver);
+	commanPage cPage=new commanPage(driver);
 	
 	@Test
 	public void testaddUser() throws Exception {
-		umPage=new userManagement(driver);
-		umPage.getAdmintag().click();
+		
+		cPage.getAdmintag().click();
 		Thread.sleep(10000);
-		waitforElementCLickable(umPage.getUserManagementtag());
+		WebDriverWaitUtils.waitforElementCLickable(umPage.getUserManagementtag(),driver);
 		umPage.getUserManagementtag().click();
 		Thread.sleep(10000);
-		umPage.getAddUserbtn().click();
+		cPage.getAddUserbtn().click();
 		Thread.sleep(10000);
 		selectByvisibleText(umPage.getUserRoleSelect(), userRole);
 		umPage.getEmployeeNameinput().sendKeys(employeeName);
@@ -32,11 +35,11 @@ public class AddUser extends testBaseClass{
 		umPage.getUserNameinput().sendKeys(userNametext);
 		umPage.getPassWordinput().sendKeys(passWord);
 		umPage.getConfirmPasswordinput().sendKeys(passWord);
-		umPage.getSaveUserbtn().click();
+		cPage.getSaveUserbtn().click();
 		Thread.sleep(10000);
 		try {
 			if(umPage.getStrengthMeter().isDisplayed()) {
-				umPage.getSaveUserbtn().click();
+				cPage.getSaveUserbtn().click();
 				Thread.sleep(10000);
 			}
 			if(umPage.getSearchBtn().isDisplayed()) {

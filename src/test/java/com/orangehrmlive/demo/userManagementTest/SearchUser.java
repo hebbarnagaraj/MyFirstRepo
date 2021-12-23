@@ -3,24 +3,26 @@ package com.orangehrmlive.demo.userManagementTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.orangehrmlive.demo.Utils.WebDriverWaitUtils;
 import com.orangehrmlive.demo.base.testBaseClass;
+import com.orangehrmlive.demo.pages.commanPage;
 import com.orangehrmlive.demo.pages.userManagement;
 
 public class SearchUser extends testBaseClass{
 	
 	
 	String searchUserName=System.getProperty("searchUserName");
-	userManagement umPage;
+	userManagement umPage=new userManagement(driver);
+	commanPage cPage=new commanPage(driver);;
 	
 	
 	@Test
 	public void testsearchUser() throws Exception {
-		umPage=new userManagement(driver);
-		umPage.getAdmintag().click();
+		cPage.getAdmintag().click();
 		Thread.sleep(10000);
-		waitforElementCLickable(umPage.getUserManagementtag());
+		WebDriverWaitUtils.waitforElementCLickable(umPage.getUserManagementtag(),driver);
 		umPage.getUserManagementtag().click();
-		waitforElementCLickable(umPage.getUserNametag());
+		WebDriverWaitUtils.waitforElementCLickable(umPage.getUserNametag(),driver);
 		umPage.getUserNametag().sendKeys(searchUserName);
 		umPage.getSearchBtn().click();
 		Thread.sleep(10000);

@@ -3,36 +3,39 @@ package com.orangehrmlive.demo.userManagementTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.orangehrmlive.demo.Utils.WebDriverWaitUtils;
 import com.orangehrmlive.demo.base.testBaseClass;
+import com.orangehrmlive.demo.pages.commanPage;
 import com.orangehrmlive.demo.pages.userManagement;
 
 public class DeleteUser extends testBaseClass{
 	
 	String deleteuserName=System.getProperty("deleteuserName");
-	userManagement umPage;
+	userManagement umPage=new userManagement(driver);
+	commanPage cPage=new commanPage(driver);
 	
 	
 	@Test
 	public void testDeleteUser() throws Exception {
-		umPage=new userManagement(driver);
-		umPage.getAdmintag().click();
+		
+		cPage.getAdmintag().click();
 		Thread.sleep(10000);
-		waitforElementCLickable(umPage.getUserManagementtag());
+		WebDriverWaitUtils.waitforElementCLickable(umPage.getUserManagementtag(),driver);
 		umPage.getUserManagementtag().click();
 		Thread.sleep(10000);
-		waitforElementCLickable(umPage.getUserNametag());
+		WebDriverWaitUtils.waitforElementCLickable(umPage.getUserNametag(),driver);
 		umPage.getUserNametag().sendKeys(deleteuserName);
 		umPage.getSearchBtn().click();
 		Thread.sleep(10000);
-		waitforElementCLickable(umPage.getTableUserNametag());
+		WebDriverWaitUtils.waitforElementCLickable(umPage.getTableUserNametag(),driver);
 		
 		if(umPage.getSelectTabelusercheckbox().isDisplayed()) {
 			umPage.getSelectTabelusercheckbox().click();
 			umPage.getDeleteUserbtn().click();
-			waitforElementCLickable(umPage.getConfirmDeletebtn());
+			WebDriverWaitUtils.waitforElementCLickable(umPage.getConfirmDeletebtn(),driver);
 			umPage.getConfirmDeletebtn().click();
 			Thread.sleep(10000);
-			if(umPage.getAdmintag().isDisplayed()) {
+			if(cPage.getAdmintag().isDisplayed()) {
 				System.out.println("Delete User Succuess");
 			}
 		}
