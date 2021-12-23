@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.orangehrmlive.demo.TestSuites.TestList_UserManagement">
+      <class name="com.orangehrmlive.demo.TestSuites.TestList_JobManagement">
         <methods>
-          <include name="tearDown"/>
           <include name="testuserManagementsuite"/>
+          <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.orangehrmlive.demo.TestSuites.TestList_UserManagement -->
+      </class> <!-- com.orangehrmlive.demo.TestSuites.TestList_JobManagement -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

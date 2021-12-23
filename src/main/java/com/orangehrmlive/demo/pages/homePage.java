@@ -11,13 +11,25 @@ public class homePage {
 	@FindBy(xpath="//a[.='Dashboard']")
 	private WebElement dashBoardlink;
 	
-	@FindBy(xpath="//div/span[.='Invalid credentials']")
+	@FindBy(xpath="//*[.='Invalid credentials']")
 	private WebElement invalidCred;
 	
+	@FindBy(xpath="//*[.='Account disabled']")
+	private WebElement accounlockedLink;
 	
 	
 	public homePage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
+	}
+
+
+	public WebElement getAccounlockedLink() {
+		return accounlockedLink;
+	}
+
+
+	public void setAccounlockedLink(WebElement accounlockedLink) {
+		this.accounlockedLink = accounlockedLink;
 	}
 
 

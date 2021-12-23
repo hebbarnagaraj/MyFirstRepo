@@ -85,15 +85,17 @@ public class testBaseClass {
 		lPage.getLoginBtn().click();
 		Thread.sleep(10000);
 		try {
-			if(hPage.getInvalidCred().isDisplayed()) {
+			if(hPage.getAccounlockedLink().isDisplayed() || hPage.getInvalidCred().isDisplayed()) {
 				takeScreenshot();
 				Assert.fail();
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		WebDriverWaitUtils.waitforElementVisible(hPage.getDashBoardlink(),driver);
+		
+		
 		try {
+			WebDriverWaitUtils.waitforElementVisible(hPage.getDashBoardlink(),driver);
 			if(!hPage.getDashBoardlink().isDisplayed()) {
 				takeScreenshot();
 				Assert.fail();
