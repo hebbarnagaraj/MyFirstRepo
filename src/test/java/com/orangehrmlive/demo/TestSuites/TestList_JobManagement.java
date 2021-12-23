@@ -2,10 +2,11 @@ package com.orangehrmlive.demo.TestSuites;
 
 import org.testng.annotations.Test;
 
+import com.orangehrmlive.demo.base.testBaseClass;
 import com.orangehrmlive.demo.jobManagementTests.addJobTitle;
 import com.orangehrmlive.demo.jobManagementTests.getJobTitlesAndCatagaories;
 
-public class TestList_JobManagement {
+public class TestList_JobManagement extends testBaseClass{
 
 	
 	@Test
