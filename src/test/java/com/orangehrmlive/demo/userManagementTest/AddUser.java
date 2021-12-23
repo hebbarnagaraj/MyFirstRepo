@@ -47,7 +47,7 @@ public class AddUser extends testBaseClass{
 			}
 			else {
 				takeScreenshot();
-				Assert.fail();
+				Assert.fail("Unable to add user");
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

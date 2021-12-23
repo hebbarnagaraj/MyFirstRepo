@@ -41,7 +41,7 @@ public class DeleteUser extends testBaseClass{
 		}
 		else {
 			takeScreenshot();
-			Assert.fail();
+			Assert.fail("Unable to delete User");
 		}
 	}
 

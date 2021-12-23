@@ -31,7 +31,7 @@ public class SearchUser extends testBaseClass{
 		}
 		else {
 			takeScreenshot();
-			Assert.fail();
+			Assert.fail("Unable to search user");
 		}
 	}
 

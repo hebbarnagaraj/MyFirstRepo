@@ -2,20 +2,19 @@
 <testng-results skipped="1" failed="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="113718" started-at="2021-12-23T05:21:54Z" finished-at="2021-12-23T05:23:48Z">
+  <suite name="Default suite" duration-ms="30701" started-at="2021-12-23T05:32:57Z" finished-at="2021-12-23T05:33:27Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="113718" started-at="2021-12-23T05:21:54Z" finished-at="2021-12-23T05:23:48Z">
+    <test name="Default test" duration-ms="30701" started-at="2021-12-23T05:32:57Z" finished-at="2021-12-23T05:33:27Z">
       <class name="com.orangehrmlive.demo.TestSuites.TestList_JobManagement">
-        <test-method status="FAIL" signature="setUp()[pri:0, instance:com.orangehrmlive.demo.TestSuites.TestList_JobManagement@1cd629b3]" name="setUp" is-config="true" duration-ms="0" started-at="2021-12-23T10:51:54Z" finished-at="2021-12-23T10:51:54Z">
+        <test-method status="FAIL" signature="setUp()[pri:0, instance:com.orangehrmlive.demo.TestSuites.TestList_JobManagement@1e802ef9]" name="setUp" is-config="true" duration-ms="0" started-at="2021-12-23T11:02:57Z" finished-at="2021-12-23T11:02:57Z">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[null]]>
+              <![CDATA[Unable to Login to Orange HRM]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: null
+              <![CDATA[java.lang.AssertionError: Unable to Login to Orange HRM
 	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.fail(Assert.java:101)
 	at com.orangehrmlive.demo.base.testBaseClass.setUp(testBaseClass.java:90)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
@@ -50,11 +49,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="SKIP" signature="testuserManagementsuite()[pri:0, instance:com.orangehrmlive.demo.TestSuites.TestList_JobManagement@1cd629b3]" name="testuserManagementsuite" duration-ms="5509" started-at="2021-12-23T10:53:23Z" finished-at="2021-12-23T10:53:29Z">
+        <test-method status="SKIP" signature="testuserManagementsuite()[pri:0, instance:com.orangehrmlive.demo.TestSuites.TestList_JobManagement@1e802ef9]" name="testuserManagementsuite" duration-ms="10" started-at="2021-12-23T11:03:27Z" finished-at="2021-12-23T11:03:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testuserManagementsuite -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.orangehrmlive.demo.TestSuites.TestList_JobManagement@1cd629b3]" name="tearDown" is-config="true" duration-ms="743" started-at="2021-12-23T10:53:33Z" finished-at="2021-12-23T10:53:33Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.orangehrmlive.demo.TestSuites.TestList_JobManagement@1e802ef9]" name="tearDown" is-config="true" duration-ms="705" started-at="2021-12-23T11:03:27Z" finished-at="2021-12-23T11:03:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

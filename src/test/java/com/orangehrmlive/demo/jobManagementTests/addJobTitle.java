@@ -39,7 +39,7 @@ public class addJobTitle extends testBaseClass{
 		Thread.sleep(10000);
 		if(!jobPage.getJobtitleverifyEle().isDisplayed()) {
 			takeScreenshot();
-			Assert.fail();
+			Assert.fail("Unable to add Job Title");
 		}
 		
 	}

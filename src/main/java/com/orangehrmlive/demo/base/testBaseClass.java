@@ -87,9 +87,10 @@ public class testBaseClass {
 		try {
 			if(hPage.getAccounlockedLink().isDisplayed() || hPage.getInvalidCred().isDisplayed()) {
 				takeScreenshot();
-				Assert.fail();
+				Assert.fail("Unable to Login to Orange HRM");
 			}
 		} catch (Exception e) {
+			System.out.println("Cause is : "+e.getCause());
 			e.printStackTrace();
 		}
 		
